@@ -1,0 +1,141 @@
+/* GENERAL LAYOUT */
+
+/* 
+author: Seadrah Berger
+date: 8/20/2024
+file name: layout.css
+ */
+
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-rows: 1fr 3fr 1fr;
+  grid-template-areas:
+    "head head"
+    "main main"
+    "footer footer";
+}
+
+header {
+  grid-area: head;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "nav title contact";
+  text-align: center;
+  padding: 30px;
+  margin-bottom: 30px;
+  align-self: center;
+  justify-self: center;
+}
+
+nav {
+  grid-area: nav;
+  align-self: center;
+  justify-self: center;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.title {
+  grid-area: title;
+  align-self: center;
+  width: auto;
+  max-width: 35em;
+}
+
+.title h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  background-image: radial-gradient(
+    #ebecff 30%,
+    #fff7d6,
+    rgb(255, 255, 255),
+    #a292c9,
+    #fff7d6,
+    #383b5700 60%
+  );
+  background-position: 0 4px;
+}
+
+.title h2 {
+  font-size: 1.4em;
+}
+
+header aside {
+  grid-area: contact;
+  justify-self: center;
+  align-self: center;
+  text-align: left;
+}
+
+header aside ul {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+nav a {
+  color: #766b92;
+}
+
+a:hover {
+  font-style: italic;
+  color: #a292c9;
+}
+
+main {
+  grid-area: main;
+  align-self: center;
+}
+
+main article {
+  display: none;
+}
+
+main aside {
+  display: none;
+}
+
+main section {
+  display: none;
+}
+
+aside {
+  grid-area: aside;
+}
+
+footer {
+  grid-area: footer;
+  text-align: right;
+  align-self: end;
+  height: auto;
+  padding: 15px;
+}
+
+body {
+  font-family: Mulish, sans-serif;
+  background-image: linear-gradient(to bottom, #ebecff 30%, #cecad4);
+}
+
+header {
+  background-color: #ebecff;
+  color: #383b57;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Ysabeau Office", serif;
+  color: #383b57;
+}

@@ -1,0 +1,108 @@
+/* PROJECTS PAGE */
+
+/* 
+author: Seadrah Berger
+date: 8/22/2024
+file name: projects.css
+ */
+
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+main section {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-image: radial-gradient(#dfdbe600 90%, #fff7d6, #383b57);
+  height: 24em;
+  padding: 15px;
+  justify-content: space-between;
+  max-width: 350px;
+}
+
+main section h2 {
+  font-size: 2em;
+}
+
+main section p {
+  max-height: 35px;
+  margin-bottom: 10px;
+}
+
+main section img {
+  width: 100%;
+  height: auto;
+  max-height: 220px;
+  margin-bottom: 15px;
+  align-self: center;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 1195px) {
+  main section {
+    max-width: 275px;
+  }
+}
+
+@media screen and (max-width: 1195px) {
+  main section {
+    max-width: 240px;
+  }
+
+  main section h2 {
+    font-size: 1.8em;
+  }
+
+  main section p {
+    font-size: 0.9em;
+  }
+}
+
+@media screen and (max-width: 865px) {
+  body {
+    grid-template-rows: 0.5fr 4fr 0.5fr;
+  }
+
+  .title {
+    justify-self: center;
+  }
+
+  header {
+    grid-area: head;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "title title"
+      "nav contact";
+    margin-bottom: 15px;
+
+    column-gap: 18px;
+  }
+
+  main {
+    flex-direction: column;
+    gap: 100px;
+  }
+
+  main section {
+    max-width: 270px;
+  }
+
+  header nav ul {
+    padding: 0px;
+    font-size: 0.9em;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
+  header aside ul {
+    font-size: 0.9em;
+    gap: 12px;
+  }
+}

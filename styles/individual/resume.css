@@ -1,0 +1,191 @@
+/* RESUME PAGE */
+
+/* 
+author: Seadrah Berger
+date: 8/22/2024
+file name: resume.css
+ */
+
+main {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "img work skills"
+    "img education goals";
+  margin-right: 90px;
+}
+
+main img {
+  display: block;
+  grid-area: img;
+  align-self: center;
+  justify-self: center;
+  margin-left: 50px;
+  margin-right: 100px;
+
+  max-width: 100%;
+  height: auto;
+  max-height: 500px;
+}
+
+main section {
+  display: block;
+}
+
+main section h2 {
+  font-size: 1.8em;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #383b57;
+  max-width: 175px;
+  line-height: 1.7em;
+  background-image: radial-gradient(#dfdbe600 75%, #fff7d6, #383b57);
+  text-align: center;
+}
+
+section ul li {
+  margin-left: 30px;
+  line-height: 1.5em;
+  list-style-position: inside;
+  list-style: circle;
+  color: #383b57;
+}
+
+.work {
+  grid-area: work;
+  justify-self: start;
+  align-self: start;
+  margin-top: 20px;
+}
+
+.skills {
+  grid-area: skills;
+  justify-self: start;
+  align-self: start;
+  margin-top: 20px;
+}
+
+.education {
+  grid-area: education;
+  justify-self: start;
+  align-self: start;
+  margin-top: 20px;
+}
+
+.goals {
+  grid-area: goals;
+  align-self: start;
+  justify-self: start;
+  margin-top: 20px;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 1025px) {
+  main {
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-right: 10px;
+    font-size: 90%;
+  }
+
+  main img {
+    max-width: 400px;
+    margin-right: 45px;
+  }
+}
+
+@media screen and (max-width: 930px) {
+  body {
+    grid-template-rows: 1fr 4fr 0.5fr;
+  }
+
+  header {
+    margin-bottom: 50px;
+  }
+
+  .title h1 {
+    margin-bottom: 0px;
+  }
+
+  main {
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+    grid-template-rows: 2fr 1fr 1fr;
+    grid-template-areas:
+      ". img img ."
+      ". work skills ."
+      ". education goals .";
+  }
+
+  main img {
+    max-width: 100%;
+    max-height: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 30px;
+    justify-self: start;
+  }
+}
+
+@media screen and (max-width: 815px) {
+  body {
+    grid-template-rows: 0.5fr 3fr 0.5fr;
+  }
+  header {
+    grid-area: head;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "title title"
+      "nav contact";
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    column-gap: 25px;
+  }
+
+  header nav ul {
+    padding: 0px;
+    font-size: 0.9em;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
+  header aside ul {
+    font-size: 0.9em;
+    gap: 12px;
+  }
+
+  main {
+    grid-template-rows: 2fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "img"
+      "work"
+      "skills"
+      "education"
+      "goals";
+    margin: 0;
+  }
+
+  main img {
+    margin: 40px;
+    margin-top: 0px;
+    justify-self: center;
+    align-self: start;
+    max-width: 350px;
+  }
+
+  main section h2 {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .work,
+  .skills,
+  .education,
+  .goals {
+    font-size: 1.1em;
+    width: 14em;
+    justify-self: center;
+  }
+}
