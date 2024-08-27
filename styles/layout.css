@@ -6,8 +6,12 @@ date: 8/20/2024
 file name: layout.css
  */
 
-body {
+html {
   height: 100vh;
+}
+
+body {
+  height: 100%;
   margin: 0;
   padding: 0;
   display: grid;
