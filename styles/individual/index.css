@@ -146,7 +146,7 @@ main aside img:last-child {
 
 @media screen and (max-width: 660px) {
   body {
-    grid-template-rows: 0.5fr 2fr 0.5fr;
+    grid-template-rows: 0.5fr 3fr 0.5fr;
   }
 
   main aside img {
